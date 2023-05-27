@@ -1,0 +1,1 @@
+cmd_/home/tigerfox4697/kernelClass/TestMod/helloworld.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/tigerfox4697/kernelClass/TestMod/helloworld.ko /home/tigerfox4697/kernelClass/TestMod/helloworld.o /home/tigerfox4697/kernelClass/TestMod/helloworld.mod.o;  true

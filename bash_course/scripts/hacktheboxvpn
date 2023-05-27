@@ -1,0 +1,2 @@
+cd $HOME;
+sudo openvpn lab_TigerFox4697.ovpn

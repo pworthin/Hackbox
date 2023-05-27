@@ -1,0 +1,10 @@
+#!/bin/bash
+
+pathfile=$(pwd)
+list=$(ls -la ~/Hackbox/bash_course/scripts)
+
+echo "Good Morning, ${USER^}"
+echo "The list of files in your bash course $pathfile are as follows:"
+echo "$list"
+
+exit 0

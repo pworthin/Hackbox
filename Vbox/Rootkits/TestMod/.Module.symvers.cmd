@@ -1,0 +1,1 @@
+cmd_/home/tigerfox4697/kernelClass/TestMod/Module.symvers := sed 's/ko$$/o/' /home/tigerfox4697/kernelClass/TestMod/modules.order | scripts/mod/modpost -m -a  -o /home/tigerfox4697/kernelClass/TestMod/Module.symvers -e -i Module.symvers   -T -

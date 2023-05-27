@@ -1,0 +1,8 @@
+#!/bin/bash
+
+read -p "First name: " fname
+read -p "Ext: " extnum
+
+#echo $(touch extensions.csv|echo $fname,$extnum >> extensions.csv)
+echo "$fname,$extnum" >> new_ext.csv 
+exit 0

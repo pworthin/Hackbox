@@ -1,0 +1,4 @@
+#!/bin/bash
+
+student="Roxie"
+echo "Time to go, ${student}"

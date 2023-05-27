@@ -1,0 +1,1 @@
+cmd_/home/tigerfox4697/kernelClass/TestMod/helloworld.mod := printf '%s\n'   helloworld.o | awk '!x[$$0]++ { print("/home/tigerfox4697/kernelClass/TestMod/"$$0) }' > /home/tigerfox4697/kernelClass/TestMod/helloworld.mod

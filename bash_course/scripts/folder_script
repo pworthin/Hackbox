@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd $bashscripts/test_scripts
+while read line;do
+	mkdir "$line" 
+done < "$1"

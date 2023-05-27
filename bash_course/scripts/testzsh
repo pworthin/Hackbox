@@ -1,0 +1,7 @@
+#!/bin/bash
+
+read -p "Would you like to perform a system update? (y/n)" opt
+case "$opt" in
+	y) systemupdate;;
+	n) break;;
+esac

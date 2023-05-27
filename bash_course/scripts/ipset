@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+ip=$(echo $1);
+source setip $ip;

@@ -1,0 +1,1 @@
+cmd_/home/tigerfox4697/kernelClass/TestMod/reboot_blocker.mod := printf '%s\n'   reboot_blocker.o | awk '!x[$$0]++ { print("/home/tigerfox4697/kernelClass/TestMod/"$$0) }' > /home/tigerfox4697/kernelClass/TestMod/reboot_blocker.mod

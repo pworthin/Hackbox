@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#solution=$(($2$1$3))
+
+echo $(( $@ ))
+exit 0

@@ -1,0 +1,29 @@
+#!/bin/zsh 
+
+
+export ip=$(echo $1)
+#export "$ip=$1";
+printf "Testing connection for $ip...\n"
+ping $ip -c 1 > /dev/null;
+while [[ $? -gt 0 ]]
+do
+	echo -n "This IP address of $ip is not working. Try again"
+	read ip
+	export ip=$(echo $ip)
+	ping $ip -c 1 > /dev/null; 
+done
+echo "Successful response received from $ip"
+echo "Assigning your IP address to $myip..."
+#myip=$(ip addr show dev tun0 | grep -Eo "^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$" | sed 1q)
+myip=$(ip route get 1.2.3.4 dev tun0 | awk '{print $5}')
+export myip="$myip"
+echo "Testing. You should see $myip"
+export PS1='\u@$IP:\w\$'
+#read -p "Would you like to do a preliminary scan? (y/n)" opt
+echo -n "Would you like to do a preliminary scan? (y/n)"
+read opt;
+case "$opt" in
+	y) printf "\n";sudo nmap -sC -sV $ip;;
+esac
+
+

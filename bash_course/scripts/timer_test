@@ -1,0 +1,19 @@
+#!/bin/bash
+
+seconds=""
+
+while getopts "m:s:" option;do
+case "$option" in
+	m)seconds=$(( seconds + $OPTARG * 60 ));;
+	s)seconds=$(( seconds + $OPTARG ));;
+
+	esac
+	
+	
+done 
+
+while [ "$seconds" -gt 0 ];do
+	((seconds--))
+	echo "$seconds seconds remaining"
+	sleep 1s
+done
